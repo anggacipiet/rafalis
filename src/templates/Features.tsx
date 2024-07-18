@@ -1,6 +1,5 @@
 'use client'
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { BackgroundGradient } from '@/component/background/BackgroundGradient';

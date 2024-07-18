@@ -1,7 +1,6 @@
 'use client'
 import Image from "next/image";
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import React from 'react';
 import { CardBody, CardContainer, CardItem } from "@/component/card/3d-card";
 import { Product } from '@/shared/products';
 import { Meta } from '@/component/layout/Meta';
