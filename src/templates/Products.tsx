@@ -1,8 +1,6 @@
-'use client'
 import Image from "next/image";
 import React from 'react';
 import { CardBody, CardContainer, CardItem } from "@/component/card/3d-card";
-import { Product } from '@/shared/products';
 import { Meta } from '@/component/layout/Meta';
 import { AppConfig } from '@/utils/AppConfig';
 import { Banner } from './Banner';
