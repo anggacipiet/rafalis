@@ -4,8 +4,6 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { CardBody, CardContainer, CardItem } from "@/component/card/3d-card";
 import { Product } from '@/shared/products';
-import { Meta } from '@/component/layout/Meta';
-import { AppConfig } from '@/utils/AppConfig';
 import { Banner } from './Banner';
 import { Footer } from './Footer';
 import { Navbar } from './Navbar';
@@ -34,10 +32,7 @@ const Products = () => {
   if (error) return <div>{error}</div>;
 
   return (
-    
-      <Meta title={AppConfig.title} description={AppConfig.description} />
-      <Navbar/>
-      <div className="min-h-screen bg-black py-12 pt-36">
+    <div className="min-h-screen bg-black py-12 pt-36">
       <h1 className="text-lg md:text-7xl text-center font-sans font-bold mb-8 text-white">All products ({products.length})</h1>
       <div className="flex flex-wrap justify-center">
         {products.map((product, index) => (
