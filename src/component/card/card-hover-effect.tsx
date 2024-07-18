@@ -7,7 +7,7 @@ export const HoverEffect = ({
   items,
   className = "",
 }: {
-  items: { title: string; description: string; link: string }[];
+  items: { title: string; description: string; link: string; icon: React.ReactNode }[];
   className?: string;
 }) => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
@@ -34,6 +34,7 @@ export const HoverEffect = ({
             )}
           </AnimatePresence>
           <Card>
+            {item.icon} {/* Render the icon */}
             <CardTitle>{item.title}</CardTitle>
             <CardDescription>{item.description}</CardDescription>
           </Card>
@@ -68,7 +69,7 @@ export const CardTitle = ({ className = "", children }: { className?: string; ch
 
 export const CardDescription = ({ className = "", children }: { className?: string; children: React.ReactNode }) => {
   return (
-    <p className={cn("mt-8 text-zinc-400 tracking-wide leading-relaxed text-sm", className)}>
+    <p className={cn("mt-2 text-zinc-400 tracking-wide leading-relaxed text-sm", className)}>
       {children}
     </p>
   );

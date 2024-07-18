@@ -65,7 +65,7 @@ const Steps = () => {
                     <div className="md:hidden text-sm font-normal uppercase pt-3 sm:pl-3 text-neutral-500"><span className="font-black">Step 2</span> - Negosiasi</div>
                     <div className="py-3 text-3xl text-white font-semibold">Negosiasi Harga</div>
                     <div className="text-neutral-500">
-                      Silakan melakukan negosiasi dengan kami dan berkonsultasi.
+                      Silakan melakukan negosiasi dan berkonsultasi dengan kami.
                     </div>
                   </div>
                   <div className="md:w-96 w-full p-5 hidden md:flex items-center justify-center">
@@ -187,7 +187,7 @@ const Steps = () => {
                     <div className="md:hidden text-sm font-normal uppercase pt-3 sm:pl-3 text-neutral-500"><span className="font-black">Step 5</span> - Pengiriman</div>
                     <div className="py-3 text-3xl text-white font-semibold">Pengiriman</div>
                     <div className="text-neutral-500">
-                      Setelah produk selesai, kami akan mengirimkan pesanan Anda ke alamat yang telah Anda berikan.
+                      Setelah produk selesai, kami akan mengirimkan pesanan Anda ke alamat yang telah di sepakati.
                     </div>
                   </div>
                   <div className="hidden md:flex md:w-96 w-full p-5 items-center justify-center">
