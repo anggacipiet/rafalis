@@ -5,7 +5,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { BackgroundGradient } from '@/component/background/BackgroundGradient';
 import { Product } from '@/shared/products';
-import { StoreProps } from '@/shared/props';
 
 const Features = () => {
   const [products, setProducts] = useState<Product[]>([]);
