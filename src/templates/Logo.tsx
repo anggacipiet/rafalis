@@ -1,5 +1,3 @@
-import { AppConfig } from "@/utils/AppConfig";
-
 type ILogoProps = {
   xl?: boolean; // Optional prop to determine if the logo should be extra large
 };
