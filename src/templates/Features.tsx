@@ -39,7 +39,7 @@ const Features = () => {
           {products.map((product) => (
             <div key={product.title} className="flex justify-center">
               <BackgroundGradient
-                className="flex flex-col rounded-[22px] bg-white dark:bg-zinc-900 overflow-hidden h-full max-w-sm">
+                className="flex flex-col rounded-[22px] bg-black dark:bg-zinc-900 overflow-hidden h-full max-w-sm">
                 <div className="p-4 sm:p-6 flex flex-col items-center text-center flex-grow">
                   <Image
                     src={product.imgHref}
