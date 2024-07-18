@@ -30,9 +30,9 @@ const Features = () => {
   if (error) return <div>{error}</div>;
 
   return (
-    <div className="h-full w-full p-4 overflow-hidden bg-black border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20">
+    <div className="py-12 bg-black">
       <div className="text-center">
-        <p className="my-2 text-3xl leading-8 font-extrabold tracking-tight text-white sm:text-4xl">PRODUCT</p>
+        <p className="my-2 text-3xl leading-8 font-extrabold tracking-tight text-white sm:text-4xl">FEATURED PRODUCTS</p>
       </div>
       <div className="mt-10 mx-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
@@ -58,12 +58,6 @@ const Features = () => {
             </div>
           ))}
         </div>
-      </div>
-      <div className="mt-20 text-center">
-        <Link href="/products"
-          className="px-4 py-2 rounded border border-neutral-600 text-neutral-700 bg-white hover:bg-gray-100 transition duration-200">
-          View All Products
-        </Link>
       </div>
     </div>
   );
