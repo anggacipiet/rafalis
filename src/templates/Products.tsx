@@ -34,9 +34,10 @@ const Products = () => {
   if (error) return <div>{error}</div>;
 
   return (
-    <div className="min-h-screen bg-black py-12 pt-36">
+    
       <Meta title={AppConfig.title} description={AppConfig.description} />
       <Navbar/>
+      <div className="min-h-screen bg-black py-12 pt-36">
       <h1 className="text-lg md:text-7xl text-center font-sans font-bold mb-8 text-white">All products ({products.length})</h1>
       <div className="flex flex-wrap justify-center">
         {products.map((product, index) => (
