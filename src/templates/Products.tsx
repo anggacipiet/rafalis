@@ -6,7 +6,6 @@ import { CardBody, CardContainer, CardItem } from "@/component/card/3d-card";
 import { Product } from '@/shared/products';
 import { Banner } from './Banner';
 import { Footer } from './Footer';
-import { Navbar } from './Navbar';
 
 const Products = () => {
   const [products, setProducts] = useState<Product[]>([]);
