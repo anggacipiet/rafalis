@@ -1,7 +1,7 @@
-// /component/footer/Location.tsx
 import { QRScanMeLocation } from '@/component/location/QRScanMeLocation';
 import { HoverEffect } from "@/component/card/card-hover-effect";
 import { MailIcon, PhoneIcon } from '@heroicons/react/outline';
+import { Section } from "@/component/layout/Section";
 
 const Location = () => {
   // URL Google Maps yang ingin dituju
@@ -41,7 +41,11 @@ const Location = () => {
   ];
 
   return (
-    <HoverEffect items={howToDotos} />
+    <div className="h-full w-full p-4 overflow-hidden bg-black border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20">
+      <Section>
+      <HoverEffect items={howToDotos} />
+      </Section>
+    </div>  
   );
 };
 

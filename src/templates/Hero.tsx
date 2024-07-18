@@ -8,7 +8,7 @@ import { Navbar } from './Navbar';
 import { Button } from '@/component/button/MovingBorder';
 
 const Hero = () => (
-  <Background color="bg-gray-900"> 
+  <Background color="bg-black"> 
     <Navbar></Navbar>
     <Section yPadding="pt-20 pb-32">
       <HeroOneButton
