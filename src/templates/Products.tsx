@@ -9,32 +9,15 @@ import { AppConfig } from '@/utils/AppConfig';
 import { Banner } from './Banner';
 import { Footer } from './Footer';
 import { Navbar } from './Navbar';
+import { useProducts } from '@/shared/ProductsContext';
 
 const Products = () => {
-  const [products, setProducts] = useState<Product[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+  const { products, error } = useProducts();
 
-  useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        const response = await axios.get('/api/products');
-        setProducts(response.data);
-      } catch (err) {
-        setError('Failed to load products');
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchProducts();
-  }, []);
-
-  if (loading) return <div>Loading...</div>;
   if (error) return <div>{error}</div>;
 
   return (
-    <div className="min-h-screen bg-black py-12 pt-36">
+    <div className="py-12 bg-gray-900">
       <Meta title={AppConfig.title} description={AppConfig.description} />
       <Navbar/>
       <h1 className="text-lg md:text-7xl text-center font-sans font-bold mb-8 text-white">All products ({products.length})</h1>
@@ -68,16 +51,16 @@ const Products = () => {
                 <CardItem
                   translateZ={20}
                   as="button"
-                  className="px-4 py-2 rounded-xl text-xs font-normal text-white"
+                  className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
                 >
-                  Try now →
+                  Spesifikasi →
                 </CardItem>
                 <CardItem
                   translateZ={20}
                   as="button"
-                  className="px-4 py-2 rounded-xl bg-black bg-white text-black text-white text-xs font-bold"
+                  className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
                 >
-                  Sign up
+                  Konsultasi
                 </CardItem>
               </div>
             </CardBody>

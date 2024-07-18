@@ -20,13 +20,13 @@ const Hero = () => (
         }
         description=""
         button={
-           <Link legacyBehavior href="/store">
+           <Link legacyBehavior href="/products">
             <a>
                 <Button
                     borderRadius="1.75rem"
-                    className="bg-white bg-black text-black text-white border-neutral-200 border-slate-800"
+                    className="bg-white bg-black px-4 py-2 rounded-xl text-base font-normal text-red-700 border-neutral-200 border-slate-800"
                 >
-                    Marketplace
+                    Marketplace →
                 </Button>
               </a>  
             </Link>

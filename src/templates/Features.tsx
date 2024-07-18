@@ -4,29 +4,11 @@ import axios from 'axios';
 import Link from 'next/link';
 import Image from 'next/image';
 import { BackgroundGradient } from '@/component/background/BackgroundGradient';
-import { Product } from '@/shared/products';
+import { useProducts } from '@/shared/ProductsContext';
 
 const Features = () => {
-  const [products, setProducts] = useState<Product[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+  const { products, error } = useProducts();
 
-  useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        const response = await axios.get('/api/products');
-        setProducts(response.data);
-      } catch (err) {
-        setError('Failed to load products');
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchProducts();
-  }, []);
-
-  if (loading) return <div>Loading...</div>;
   if (error) return <div>{error}</div>;
 
   return (
