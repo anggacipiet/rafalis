@@ -24,7 +24,7 @@ const Hero = () => (
             <a>
                 <Button
                     borderRadius="1.75rem"
-                    className="bg-black dark:bg-black text-black dark:text-white border-neutral-200 dark:border-slate-800"
+                    className="bg-white bg-black text-black text-white border-neutral-200 border-slate-800"
                 >
                     Marketplace
                 </Button>
