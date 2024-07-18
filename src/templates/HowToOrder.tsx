@@ -54,6 +54,7 @@ export const HowToOrders = () => {
                 <div className="mt-10">
                     <HoverEffect
                         items={howToDotos.map(how => ({
+                            icon:how.slug,
                             title: how.title,
                             description: how.description,
                             link: `/how/${how.slug}`,
