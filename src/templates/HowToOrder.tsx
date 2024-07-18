@@ -1,5 +1,4 @@
 'use client'
-import Link from "next/link";
 import { HoverEffect } from "@/component/card/card-hover-effect";
 
 export const HowToOrders = () => {
