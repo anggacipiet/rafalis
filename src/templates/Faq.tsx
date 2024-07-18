@@ -12,7 +12,7 @@ const FAQ = () => {
           <hr className=" border-neutral-700" />
           <Accordion title="Berapa minum po order?" content="1 Mobil" />
           <hr className=" border-neutral-700" />
-          <Accordion title="Berapa persen DP agar pesanan di buat?" content="50% dari harga PO" />
+          <Accordion title="Berapa persen DP?" content="50% dari harga PO" />
           <hr className=" border-neutral-700" />
           <Accordion title="Berapa lama pengiriman?" content="Sesuai kesepakatan" />
         </div>

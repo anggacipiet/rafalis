@@ -21,7 +21,7 @@ const Steps = () => {
               <div className="flex-auto rounded border-gray-300">
                 <div className="flex md:flex-row flex-col items-center">
                   <div className="flex-auto">
-                    <div className="md:hidden text-sm font-normal uppercase pt-3 sm:pl-3 text-neutral-500"><span className="font-black">Step 1</span> - Idea</div>
+                    <div className="md:hidden text-sm font-normal uppercase pt-3 sm:pl-3 text-neutral-500"><span className="font-black">Step 1</span> - Hubungi</div>
                     <div className="py-3 text-3xl text-white font-semibold">Hubungi Kami Untuk Order</div>
                     <div className="text-neutral-500">
                       Dapat melalui layanan chat Whatsapp, telepon dan email.
@@ -62,7 +62,7 @@ const Steps = () => {
               <div className="flex-auto rounded border-gray-300">
                 <div className="flex md:flex-row flex-col items-center">
                   <div className="flex-auto">
-                    <div className="md:hidden text-sm font-normal uppercase pt-3 sm:pl-3 text-neutral-500"><span className="font-black">Step 2</span> - Collaboration</div>
+                    <div className="md:hidden text-sm font-normal uppercase pt-3 sm:pl-3 text-neutral-500"><span className="font-black">Step 2</span> - Negosiasi</div>
                     <div className="py-3 text-3xl text-white font-semibold">Negosiasi Harga</div>
                     <div className="text-neutral-500">
                       Silakan melakukan negosiasi dengan kami dan berkonsultasi.
@@ -104,7 +104,7 @@ const Steps = () => {
               <div className="flex-auto rounded border-gray-300">
                 <div className="flex md:flex-row flex-col items-center">
                   <div className="flex-auto">
-                    <div className="md:hidden text-sm font-normal uppercase pt-3 sm:pl-3 text-neutral-500"><span className="font-black">Step 3</span> - Development</div>
+                    <div className="md:hidden text-sm font-normal uppercase pt-3 sm:pl-3 text-neutral-500"><span className="font-black">Step 3</span> - Deal</div>
                     <div className="py-3 text-3xl text-white font-semibold">Deal Harga</div>
                     <div className="text-neutral-500">
                       Bila terjadi kesepakatan harga kirim PO yang dipesan melalui email kami.
@@ -144,7 +144,7 @@ const Steps = () => {
               <div className="flex-auto rounded border-gray-300">
                 <div className="flex md:flex-row flex-col items-center">
                   <div className="flex-auto">
-                    <div className="md:hidden text-sm font-normal uppercase pt-3 sm:pl-3 text-neutral-500"><span className="font-black">Step 4</span> - Development</div>
+                    <div className="md:hidden text-sm font-normal uppercase pt-3 sm:pl-3 text-neutral-500"><span className="font-black">Step 4</span> - Pembayaran</div>
                     <div className="py-3 text-3xl text-white font-semibold">Pembayaran</div>
                     <div className="text-neutral-500">
                       Setelah kami verifikasi pembayaran, kami akan segera memproses pesanan Anda.

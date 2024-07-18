@@ -20,8 +20,8 @@ const Navbar = () => (
           </Link>
         </li>
         <li className="nav-item">
-          <Link legacyBehavior href="/meeting-point">
-            <a className="nav-link">Lokasi</a>
+          <Link legacyBehavior href="/how-to-order">
+            <a className="nav-link">Order</a>
           </Link>
         </li>
         <li className="nav-item">

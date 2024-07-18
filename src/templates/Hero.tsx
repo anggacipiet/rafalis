@@ -15,7 +15,7 @@ const Hero = () => (
         title={
           <>
             {'Selamat datang! kenali produk kami\n'}
-            <span className="text-primary-500">Mulai berbelanja</span>
+            <span className="text-red-700">Rafalis Erha Jaya</span>
           </>
         }
         description=""

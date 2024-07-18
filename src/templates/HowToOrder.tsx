@@ -1,5 +1,10 @@
 'use client'
 import { HoverEffect } from "@/component/card/card-hover-effect";
+import { Meta } from '@/component/layout/Meta';
+import { AppConfig } from '@/utils/AppConfig';
+import { Banner } from './Banner';
+import { Footer } from './Footer';
+import { Navbar } from './Navbar';
 
 export const HowToOrders = () => {
     const howToDotos = [
@@ -17,13 +22,19 @@ export const HowToOrders = () => {
         },
         {
             title: 'Deal harga Purchase Order',
-            description: 'Bila terjadi kesepakatan harga sila kirim PO produk yang dipesan melalui email kami.',
+            description: 'Bila terjadi kesepakatan harga kirim PO yang dipesan melalui email kami.',
             slug: 'mastering-your-instrument',
             isFeatured: true,
         },
         {
-            title: 'Pembayaran dan Pengiriman',
-            description: 'Pesanan akan segera kami proses setelah melakukan pembayaran 50% dan ditransfer.',
+            title: 'Pembayaran',
+            description: 'Setelah kami verifikasi pembayaran, kami akan segera memproses pesanan Anda.',
+            slug: 'mastering-your-instrument',
+            isFeatured: true,
+        },
+        {
+            title: 'Pengiriman',
+            description: 'Setelah produk selesai, kami akan mengirimkan pesanan Anda ke alamat yang telah Anda berikan..',
             slug: 'mastering-your-instrument',
             isFeatured: true,
         },
@@ -31,9 +42,10 @@ export const HowToOrders = () => {
 
     return (
         <div className="p-12 bg-gray-900">
+            <Meta title={AppConfig.title} description={AppConfig.description} />
+            <Navbar />
             <div className="max-w-7xl mx-auto px-4 sm:px-6">
                 <div className="text-center">
-                    <h2 className="text-base text-teal-600 font-semibold tracking-wide uppercase">FEATURED WEBINARS</h2>
                     <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-white sm:text-4xl">CARA PEMESANAN</p>
                 </div>
 
@@ -47,6 +59,8 @@ export const HowToOrders = () => {
                     />
                 </div>
             </div>
+            <Banner />
+            <Footer />
         </div>
     );
 };
