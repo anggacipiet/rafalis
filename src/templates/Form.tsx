@@ -1,6 +1,5 @@
 import { ContactForm } from "@/component/contact-form/contactForm";
 import { IContactFormProps } from "@/models/contactFormProps";
-import { Section } from "@/component/layout/Section";
 
 const Form = (props: IContactFormProps) => {
   const {
