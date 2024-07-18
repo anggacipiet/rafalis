@@ -34,7 +34,7 @@ const Products = () => {
   if (error) return <div>{error}</div>;
 
   return (
-    <div className="antialiased text-gray-600">
+    <div className="min-h-screen bg-black py-12 pt-36">
       <Meta title={AppConfig.title} description={AppConfig.description} />
       <Navbar/>
       <h1 className="text-lg md:text-7xl text-center font-sans font-bold mb-8 text-white">All products ({products.length})</h1>
