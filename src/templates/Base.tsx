@@ -8,11 +8,14 @@ import { Features } from './Features';
 import { FAQ } from './Faq';
 import { Steps } from './Step';
 import { Location } from './Location';
+import { Lines } from '@/component/lines/Lines';
+import { Herox } from './Herox';
 
 const Base = () => (
   <div className="antialiased text-gray-600">
     <Meta title={AppConfig.title} description={AppConfig.description} />
-    <Hero />
+    <Lines />
+    <Herox />
     <VerticalFeatures />
     <Features />
     <Steps />

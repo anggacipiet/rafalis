@@ -76,7 +76,29 @@ module.exports = {
           700: '#4a5568',
           800: '#2d3748',
           900: '#1a202c',
-        }
+        },
+        black: {
+          600: '#0D0D0D',
+        },
+        current: 'currentColor',
+        transparent: 'transparent',
+        stroke: '#EEEEEE',
+        strokedark: '#2D2F40',
+        hoverdark: '#252A42',
+        titlebg: '#73A942',
+        titlebg2: '#FFEAC2',
+        titlebgdark: '#46495A',
+        btndark: '#292E45',
+        white: '#FFFFFF',
+        blackho: '#2C3149',
+        blacksection: '#1C2136',
+        primaryho: '#73A942',
+        meta: '#20C5A8',
+        waterloo: '#757693',
+        manatee: '#999AA1',
+        alabaster: '#FBFBFB',
+        zumthor: '#EDF5FF',
+        socialicon: '#D1D8E0',
       },
       lineHeight: {
         hero: '4.5rem',
@@ -86,6 +108,9 @@ module.exports = {
         scroll:
           'scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite',
         shimmer: 'shimmer 2s linear infinite',
+        line1: 'line 3s linear infinite',
+        line2: 'line 6s linear infinite',
+        line3: 'line 9s linear infinite',
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
@@ -109,6 +134,10 @@ module.exports = {
           to: {
             backgroundPosition: '-200% 0',
           },
+        },
+        line: {
+          '0%, 100%': { transform: 'translateY(100%)' },
+          '50%': { transform: 'translateY(0)' },
         },
       },
     },

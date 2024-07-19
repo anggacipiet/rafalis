@@ -11,9 +11,10 @@ const Features = () => {
   if (error) return <div>{error}</div>;
 
   return (
-    <div className="py-12 bg-black">
+    <section>
+    <div className="relative bg-black-600">
       <div className="text-center">
-        <p className="my-2 text-3xl leading-8 font-extrabold tracking-tight text-white sm:text-4xl">FEATURED PRODUCTS</p>
+        <p className="my-2 text-3xl leading-8 font-extrabold tracking-tight text-white sm:text-4xl">PRODUCTS</p>
       </div>
       <div className="mt-10 mx-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
@@ -41,6 +42,7 @@ const Features = () => {
         </div>
       </div>
     </div>
+  </section>
   );
 }
 

@@ -3,7 +3,7 @@ import { Section } from "@/component/layout/Section";
 const Steps = () => {
   return (
     <>
-      <div className="h-full w-full p-4 overflow-hidden bg-black border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20">
+      <div className="relative bg-black-600">
         <Section>   
           <h1 className="font-semibold text-5xl text-white mb-8">Pemesanan</h1>
           <div className="flex flex-col space-y-10 md:space-y-0 divide-y divide-neutral-800 md:divide-y-0 ">
