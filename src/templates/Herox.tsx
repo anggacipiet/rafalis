@@ -52,11 +52,11 @@ const Herox = () => {
 
           {/* Hero image */}
           <ModalVideo
-            thumb="/assets/images/main.svg"
+            thumb="/public/assets/images/main.svg"
             thumbWidth={768}
             thumbHeight={432}
             thumbAlt="Modal video thumbnail"
-            video="/assets/videos/video.mp4"
+            video="/public/assets/videos/video.mp4"
             videoWidth={1920}
             videoHeight={1080}
           />
