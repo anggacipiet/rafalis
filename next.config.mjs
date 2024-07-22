@@ -19,8 +19,8 @@ const nextConfig = {
     return config
   },
   images: {
-    domains: ['www.universaleco.id','bosspanel.co.id','daconjayabeton.com'],
-  },
+    domains: ['www.universaleco.id', 'bosspanel.co.id', 'daconjayabeton.com','rafalis-cydjfnx5f-anggacipiets-projects.vercel.app'],
+  }
 }
 
 export default bundleAnalyzer(nextConfig)
