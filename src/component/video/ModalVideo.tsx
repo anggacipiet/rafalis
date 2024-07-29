@@ -40,9 +40,11 @@ export default function ModalVideo({
 
   const handleVideoPlay = () => {
     if (videoRef.current) {
-      videoRef.current.pause();
-      videoRef.current.currentTime = 0;
-      videoRef.current.play();
+      // Ensure the video element is ready
+      videoRef.current.load();
+      videoRef.current.play().catch(error => {
+        console.error("Failed to play video:", error);
+      });
     }
   }
 
@@ -101,6 +103,7 @@ export default function ModalVideo({
                   height={videoHeight}
                   loop
                   controls
+                  playsInline
                   onPlay={() => console.log("Video is playing")}
                   onPause={() => console.log("Video is paused")}
                 >
