@@ -103,7 +103,7 @@ export default function ModalVideo({
                   height={videoHeight}
                   loop
                   controls
-                  autoplay
+                  autoPlay
                   playsInline
                   onPlay={() => console.log("Video is playing")}
                   onPause={() => console.log("Video is paused")}
