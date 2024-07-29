@@ -38,21 +38,6 @@ export default function ModalVideo({
     setModalOpen(true)
   }
 
-  const handleVideoPlay = () => {
-    if (videoRef.current) {
-      videoRef.current.play()
-        .then(() => console.log("Video is playing"))
-        .catch(error => console.error("Failed to play video:", error))
-    }
-  }
-
-  const handleVideoPause = () => {
-    if (videoRef.current) {
-      videoRef.current.pause()
-      console.log("Video is paused")
-    }
-  }
-
   return (
     <div>
       {/* Video Thumbnail */}
@@ -74,7 +59,7 @@ export default function ModalVideo({
         </div>
       </div>
 
-      <Transition show={modalOpen} as={Fragment} afterEnter={handleVideoPlay}>
+      <Transition show={modalOpen} as={Fragment}>
         <Dialog initialFocus={videoRef} onClose={handleModalClose}>
           {/* Modal Backdrop */}
           <Transition.Child
@@ -108,8 +93,6 @@ export default function ModalVideo({
                   height={videoHeight}
                   loop
                   controls
-                  onPlay={handleVideoPlay}
-                  onPause={handleVideoPause}
                   preload="auto"
                 >
                   <source src={video} type="video/mp4" />
