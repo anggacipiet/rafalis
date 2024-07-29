@@ -40,9 +40,9 @@ export default function ModalVideo({
 
   const handleVideoPlay = () => {
     if (videoRef.current) {
-      videoRef.current.play().catch(error => {
-        console.error("Failed to play video:", error)
-      })
+      videoRef.current.pause();
+      videoRef.current.currentTime = 0;
+      videoRef.current.play();
     }
   }
 
