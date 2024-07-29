@@ -49,8 +49,7 @@ export default function ModalVideo({
   const handleVideoPause = () => {
     if (videoRef.current) {
       videoRef.current.pause()
-        .then(() => console.log("Video is paused"))
-        .catch(error => console.error("Failed to pause video:", error))
+      console.log("Video is paused")
     }
   }
 
