@@ -36,27 +36,14 @@ export default function ModalVideo({
 
   const handleModalOpen = () => {
     setModalOpen(true)
-    // Delay the video playback to ensure the modal is fully opened
-    setTimeout(() => {
-      if (videoRef.current) {
-        const playPromise = videoRef.current.play()
-        if (playPromise !== undefined) {
-          playPromise.then(() => {
-            console.log("Video is playing")
-          }).catch(error => {
-            console.error("Failed to play video:", error)
-          })
-        }
-      }
-    }, 300) // Adjust the delay as needed
   }
 
-  const handlePlay = () => {
-    console.log("Video is playing")
-  }
-
-  const handlePause = () => {
-    console.log("Video is paused")
+  const handleVideoPlay = () => {
+    if (videoRef.current) {
+      videoRef.current.play().catch(error => {
+        console.error("Failed to play video:", error)
+      })
+    }
   }
 
   return (
@@ -80,19 +67,7 @@ export default function ModalVideo({
         </div>
       </div>
 
-      <Transition show={modalOpen} as={Fragment} afterEnter={() => {
-        // Delay playback to allow UI transition to complete
-        if (videoRef.current) {
-          const playPromise = videoRef.current.play()
-          if (playPromise !== undefined) {
-            playPromise.then(() => {
-              console.log("Video is playing")
-            }).catch(error => {
-              console.error("Failed to play video:", error)
-            })
-          }
-        }
-      }}>
+      <Transition show={modalOpen} as={Fragment} afterEnter={handleVideoPlay}>
         <Dialog initialFocus={videoRef} onClose={handleModalClose}>
           {/* Modal Backdrop */}
           <Transition.Child
@@ -126,8 +101,8 @@ export default function ModalVideo({
                   height={videoHeight}
                   loop
                   controls
-                  onPlay={handlePlay}
-                  onPause={handlePause}
+                  onPlay={() => console.log("Video is playing")}
+                  onPause={() => console.log("Video is paused")}
                 >
                   <source src={video} type="video/mp4" />
                   Your browser does not support the video tag.
