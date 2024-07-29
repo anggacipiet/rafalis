@@ -3,7 +3,6 @@ import Link from 'next/link';
 import { Button } from '@/component/button/MovingBorder';
 import { Spotlight } from '@/component/background/Spotlight';
 import { Navbar } from './Navbar';
-import VideoThumb from '@/public/assets/images/main.svg';
 
 const Herox = () => {
   return (
@@ -53,7 +52,7 @@ const Herox = () => {
 
           {/* Hero image */}
           <ModalVideo
-            thumb={VideoThumb}
+            thumb="/assets/images/main.svg"
             thumbWidth={768}
             thumbHeight={432}
             thumbAlt="Modal video thumbnail"
