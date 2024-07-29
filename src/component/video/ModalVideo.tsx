@@ -26,7 +26,6 @@ export default function ModalVideo({
   const [modalOpen, setModalOpen] = useState<boolean>(false)
   const videoRef = useRef<HTMLVideoElement>(null)
 
-  // Handle closing the modal and pausing the video
   const handleModalClose = () => {
     setModalOpen(false)
     if (videoRef.current) {
@@ -35,20 +34,20 @@ export default function ModalVideo({
     }
   }
 
-  // Handle opening the modal and playing the video
   const handleModalOpen = () => {
     setModalOpen(true)
     // Delay the video playback to ensure the modal is fully opened
     setTimeout(() => {
       if (videoRef.current) {
-        videoRef.current.play().catch(error => {
+        videoRef.current.play().then(() => {
+          console.log("Video is playing")
+        }).catch(error => {
           console.error("Failed to play video:", error)
         })
       }
     }, 300) // Adjust the delay as needed
   }
 
-  // Event handlers for debugging play and pause events
   const handlePlay = () => {
     console.log("Video is playing")
   }
