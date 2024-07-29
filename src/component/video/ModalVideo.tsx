@@ -40,11 +40,17 @@ export default function ModalVideo({
 
   const handleVideoPlay = () => {
     if (videoRef.current) {
-      // Ensure the video element is ready
-      videoRef.current.load();
-      videoRef.current.play().catch(error => {
-        console.error("Failed to play video:", error);
-      });
+      videoRef.current.play()
+        .then(() => console.log("Video is playing"))
+        .catch(error => console.error("Failed to play video:", error))
+    }
+  }
+
+  const handleVideoPause = () => {
+    if (videoRef.current) {
+      videoRef.current.pause()
+        .then(() => console.log("Video is paused"))
+        .catch(error => console.error("Failed to pause video:", error))
     }
   }
 
@@ -103,10 +109,9 @@ export default function ModalVideo({
                   height={videoHeight}
                   loop
                   controls
-                  autoPlay
-                  playsInline
-                  onPlay={() => console.log("Video is playing")}
-                  onPause={() => console.log("Video is paused")}
+                  onPlay={handleVideoPlay}
+                  onPause={handleVideoPause}
+                  preload="auto"
                 >
                   <source src={video} type="video/mp4" />
                   Your browser does not support the video tag.
