@@ -39,11 +39,14 @@ export default function ModalVideo({
     // Delay the video playback to ensure the modal is fully opened
     setTimeout(() => {
       if (videoRef.current) {
-        videoRef.current.play().then(() => {
-          console.log("Video is playing")
-        }).catch(error => {
-          console.error("Failed to play video:", error)
-        })
+        const playPromise = videoRef.current.play()
+        if (playPromise !== undefined) {
+          playPromise.then(() => {
+            console.log("Video is playing")
+          }).catch(error => {
+            console.error("Failed to play video:", error)
+          })
+        }
       }
     }, 300) // Adjust the delay as needed
   }
@@ -78,10 +81,16 @@ export default function ModalVideo({
       </div>
 
       <Transition show={modalOpen} as={Fragment} afterEnter={() => {
+        // Delay playback to allow UI transition to complete
         if (videoRef.current) {
-          videoRef.current.play().catch(error => {
-            console.error("Failed to play video:", error)
-          })
+          const playPromise = videoRef.current.play()
+          if (playPromise !== undefined) {
+            playPromise.then(() => {
+              console.log("Video is playing")
+            }).catch(error => {
+              console.error("Failed to play video:", error)
+            })
+          }
         }
       }}>
         <Dialog initialFocus={videoRef} onClose={handleModalClose}>
