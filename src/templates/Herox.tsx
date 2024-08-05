@@ -63,7 +63,7 @@ const Herox = () => {
               thumbWidth={768}
               thumbHeight={432}
               thumbAlt="Promotional video thumbnail showing main content"
-              video="/assets/videos/video.mp4"
+              video="/assets/videos/video.webm"
               videoWidth={1920}
               videoHeight={1080}
               aria-label="Watch the promotional video"
