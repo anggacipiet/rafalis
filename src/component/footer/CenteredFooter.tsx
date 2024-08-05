@@ -4,41 +4,51 @@ import { FooterIconList } from './FooterIconList';
 
 type ICenteredFooterProps = {
   logo: ReactNode;
+  menu: ReactNode;
+  qr: ReactNode;
+  contactInfo: ReactNode;
   iconList: ReactNode;
-  children: ReactNode;
 };
 
 const CenteredFooter = (props: ICenteredFooterProps) => (
-  <div className="text-center">
-    {props.logo}
+  <div className="px-4 py-8">
+    <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
+      {/* Column 1: Logo */}
+      <div className="flex flex-col justify-center md:justify-start items-start mb-4 md:mb-0">
+        {props.logo}
+      </div>
 
-    <nav>
-      <ul className="navbar mt-5 flex flex-wrap justify-center font-medium text-base text-gray-800">
-        {props.children}
-      </ul>
-    </nav>
+      {/* Column 2: Menu */}
+      <div className="flex flex-col justify-center md:justify-start items-start mb-4 md:mb-0">
+        <h2 className="text-xl font-bold mb-2">Company</h2>
+        <ul className="space-y-2 text-gray-800 font-medium">
+          {props.menu}
+        </ul>
+      </div>
 
-    <div className="mt-8 flex justify-center">
-      <FooterIconList>{props.iconList}</FooterIconList>
+      {/* Column 3: QR Code */}
+      <div className="flex flex-col justify-center md:justify-start items-start mb-4 md:mb-0">
+        <h2 className="text-xl font-bold mb-2">Scan Me</h2>
+        {props.qr}
+      </div>
+
+      {/* Column 4: Contact Info */}
+      <div className="flex flex-col justify-center md:justify-start items-start mb-4 md:mb-0">
+        {props.contactInfo}
+      </div>
+
+      {/* Column 5: Social Icons */}
+      <div className="flex flex-col justify-center md:justify-start items-start">
+        <h2 className="text-xl font-bold mb-2">Follow Us</h2>
+        <div className="flex flex-wrap gap-2">
+          <FooterIconList>{props.iconList}</FooterIconList>
+        </div>
+      </div>
     </div>
 
-    <div className="mt-8 text-sm">
+    <div className="mt-8 text-sm text-center">
       <FooterCopyright />
     </div>
-
-    <style jsx>{`
-      .navbar :global(li) {
-        margin-left: 0.5rem; /* Tailwind class equivalent: mx-2 */
-        margin-right: 0.5rem; /* Tailwind class equivalent: mx-2 */
-      }
-
-      @media (min-width: 640px) {
-        .navbar :global(li) {
-          margin-left: 1rem; /* Tailwind class equivalent: sm:mx-4 */
-          margin-right: 1rem; /* Tailwind class equivalent: sm:mx-4 */
-        }
-      }
-    `}</style>
   </div>
 );
 

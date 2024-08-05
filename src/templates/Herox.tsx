@@ -2,12 +2,13 @@ import ModalVideo from '@/component/video/ModalVideo';
 import Link from 'next/link';
 import { Button } from '@/component/button/MovingBorder';
 import { Spotlight } from '@/component/background/Spotlight';
-import { Navbar } from './Navbar';
+import { Navbar } from '@/component/navigation';
+import { WhatsappButton } from "@/component/whatsappButton/WhatsappButton";
 
 const Herox = () => {
   return (
     <section className="relative bg-black-600">
-      <Navbar></Navbar>
+      <Navbar />
       {/* Illustration behind hero content */}
       <div className="absolute left-1/2 transform -translate-x-1/2 bottom-0 pointer-events-none -z-1" aria-hidden="true">
         <svg width="1360" height="578" viewBox="0 0 1360 578" xmlns="http://www.w3.org/2000/svg">
@@ -62,6 +63,7 @@ const Herox = () => {
           />
         </div>
       </div>
+      <WhatsappButton/>
     </section>
   )
 }

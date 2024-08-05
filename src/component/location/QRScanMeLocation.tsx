@@ -1,5 +1,5 @@
 import React from 'react';
-import QRCode from 'qrcode.react';
+import QRCode from "react-qr-code";
 
 interface QRScanMeLocationProps {
   mapUrl: string;
@@ -7,12 +7,16 @@ interface QRScanMeLocationProps {
 
 const QRScanMeLocation: React.FC<QRScanMeLocationProps> = ({ mapUrl }) => {
   return (
-    <div className="flex flex-col items-center justify-center p-4 bg-white dark:bg-zinc-900 rounded-lg shadow-md">
-      <div className="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md">
-        <QRCode value={mapUrl} size={128} />
-      </div>
+    <div className="flex flex-col items-center">
+      <QRCode
+        onClick={() => navigator.clipboard.writeText(mapUrl)}
+        size={150}
+        value={mapUrl}
+        viewBox={`0 0 256 256`}
+        className="bg-white p-2 rounded"
+      />
     </div>
   );
 };
 
-export {QRScanMeLocation};
+export { QRScanMeLocation };

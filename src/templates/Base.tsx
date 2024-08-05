@@ -7,7 +7,6 @@ import { VerticalFeatures } from './VerticalFeatures';
 import { Features } from './Features';
 import { FAQ } from './Faq';
 import { Steps } from './Step';
-import { Location } from './Location';
 //import { Lines } from '@/component/lines/Lines';
 import { Herox } from './Herox';
 
@@ -19,7 +18,6 @@ const Base = () => (
     <Features />
     <Steps />
     <FAQ />
-    <Location />
     <Banner />
     <Footer />
   </div>
