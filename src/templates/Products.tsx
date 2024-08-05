@@ -5,7 +5,7 @@ import { Meta } from '@/component/layout/Meta';
 import { AppConfig } from '@/utils/AppConfig';
 import { Banner } from './Banner';
 import { Footer } from './Footer';
-import { Navbar } from './Navbar';
+import { Navbar } from '@/component/navigation';
 import { useProducts } from '@/shared/ProductsContext';
 
 const Products = () => {
